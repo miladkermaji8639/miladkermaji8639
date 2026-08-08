@@ -1,133 +1,161 @@
+<!-- ===================== HEADER ===================== -->
+
+<div align="center">
+
 # 👋 Hi, I'm Milad Kermaji
 
-### 💻 Full Stack Developer | PHP & Laravel Specialist
+### 💻 Full Stack Developer
 
-<p align="left">
-  <a href="https://github.com/miladkermaji8639">
-    <img src="https://img.shields.io/github/followers/miladkermaji8639?label=Followers&style=for-the-badge" />
-  </a>
-  <a href="https://github.com/miladkermaji8639">
-    <img src="https://komarev.com/ghpvc/?username=miladkermaji8639&style=for-the-badge&color=blue" />
-  </a>
+### ⚡ PHP · Laravel · REST API · MySQL
+
+<p>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=650&lines=Building+Scalable+Web+Applications;Laravel+%26+PHP+Backend+Developer;REST+API+%7C+MySQL+%7C+Linux;Clean+Code+%7C+Performance+%7C+Security" />
 </p>
+
+<p>
+  <img src="https://komarev.com/ghpvc/?username=miladkermaji8639&label=PROFILE+VIEWS&color=0e75b6&style=for-the-badge" />
+  <img src="https://img.shields.io/github/followers/miladkermaji8639?label=FOLLOWERS&style=for-the-badge" />
+</p>
+
+</div>
 
 ---
 
-## 🚀 About Me
+## 🧑‍💻 About Me
 
-I'm a **Full Stack Developer** specializing in **PHP and Laravel**, with hands-on experience building scalable web applications, REST APIs, database-driven systems, and modern web platforms.
+I'm a **Full Stack Developer** with a strong focus on **Backend Development, PHP and Laravel**.
 
-My primary focus is on **Backend Development**, while also working across the frontend when needed to build complete and maintainable products.
+I build web applications, REST APIs and database-driven systems with an emphasis on:
 
-I enjoy turning complex business requirements into clean, reliable, and scalable software.
+* ⚡ Performance
+* 🔐 Security
+* 🧩 Clean Architecture
+* 📈 Scalability
+* 🗄️ Database Optimization
+* 🛠️ Maintainable Code
+
+I enjoy solving complex technical problems and turning business requirements into reliable software.
 
 ```text
-💻 Backend Development
-⚡ REST API Development
-🗄️ Database Design & Optimization
-🔐 Authentication & Security
-🚀 Performance Optimization
-🐧 Linux Server & Deployment
-🌐 Full Stack Web Development
-📦 Git & Version Control
+Backend        → PHP / Laravel / REST API
+Frontend       → JavaScript / React / Next.js
+Database       → MySQL / Optimization / Indexing
+Infrastructure → Linux / Apache / Docker
+Security       → OAuth / JWT / Authentication
+Workflow       → Git / GitHub / CI/CD
 ```
 
 ---
 
-## 🛠️ Tech Stack
+# 🚀 Tech Stack
+
+<div align="center">
 
 ### Backend
 
-<p>   <img src="https://skillicons.dev/icons?i=php,laravel,python" /> </p>
+<p>
+  <img src="https://skillicons.dev/icons?i=php,laravel,python" />
+</p>
 
-**PHP · Laravel · REST API · OAuth · JWT**
+`PHP` · `Laravel` · `REST API` · `OAuth` · `JWT`
 
 ### Frontend
 
-<p>   <img src="https://skillicons.dev/icons?i=js,react,nextjs,tailwind,bootstrap,jquery" /> </p>
+<p>
+  <img src="https://skillicons.dev/icons?i=js,react,nextjs,tailwind,bootstrap,jquery" />
+</p>
 
-**JavaScript · React · Next.js · Tailwind CSS · Bootstrap · jQuery**
+`JavaScript` · `React` · `Next.js` · `Tailwind CSS` · `Bootstrap` · `jQuery`
 
-### Database
+### Database & Infrastructure
 
-<p>   <img src="https://skillicons.dev/icons?i=mysql" /> </p>
+<p>
+  <img src="https://skillicons.dev/icons?i=mysql,linux,apache,docker,git,github" />
+</p>
 
-**MySQL · Database Design · Query Optimization · Indexing · Caching**
+`MySQL` · `Linux` · `Apache` · `Docker` · `Git` · `GitHub`
 
-### DevOps & Tools
-
-<p>   <img src="https://skillicons.dev/icons?i=git,github,linux,apache,docker" /> </p>
-
-**Git · GitHub · Linux · Apache · Docker · Production Deployment**
-
----
-
-## ⭐ Featured Project
-
-### 🏥 Benobe — Digital Healthcare Platform
-
-**Benobe** is a comprehensive digital healthcare platform focused on online medical appointment booking and online consultation services.
-
-🔗 **Website:** [benobe.ir](https://benobe.ir/)
-
-### Key Features
-
-* 🩺 Online doctor appointment booking
-* 🏥 Medical center management
-* 💬 Online consultation
-* 💳 Online payment integration
-* 👨‍⚕️ Doctor management
-* 👥 User management
-* 📊 Management dashboards
-* 🔐 Authentication & authorization
-* 🌐 REST API architecture
-* 🗄️ Database-driven architecture
-* ⚡ Performance optimization
-* 🔒 Security-focused development
-
-### My Role
-
-**Full Stack Developer / Senior Backend Developer**
-
-Working on:
-
-* Laravel backend architecture
-* REST API development
-* Database architecture and optimization
-* Authentication systems
-* Payment integrations
-* Admin and management panels
-* Appointment scheduling systems
-* Performance optimization
-* Server deployment and maintenance
-* Integration of external services
+</div>
 
 ---
 
-## 💼 Experience
+# ⭐ Featured Project
 
-### Senior Backend Developer — Benobe
+<div align="center">
+
+## 🏥 Benobe — Digital Healthcare Platform
+
+### A modern digital healthcare ecosystem
+
+</div>
+
+**Benobe** is a digital healthcare platform designed to simplify access to healthcare services through online appointment booking, medical center management and online consultation.
+
+### 🔥 Core Features
+
+```text
+🩺 Online Doctor Appointment
+🏥 Medical Center Management
+👨‍⚕️ Doctor Management
+💬 Online Consultation
+💳 Online Payment
+👥 User Management
+📊 Management Dashboards
+🔐 Authentication & Authorization
+🌐 REST API
+⚡ Performance Optimization
+🔒 Security & Access Control
+```
+
+### 🛠️ My Contributions
+
+* Designed and developed Laravel backend architecture
+* Developed and maintained REST APIs
+* Designed and optimized MySQL databases
+* Implemented authentication and authorization systems
+* Developed appointment scheduling workflows
+* Integrated payment services
+* Developed management and administration panels
+* Optimized database queries and application performance
+* Worked with Linux production servers
+* Deployed and maintained production applications
+* Integrated external services and APIs
+
+<div align="center">
+
+### 🌐 `benobe.ir`
+
+</div>
+
+---
+
+# 💼 Professional Experience
+
+### 🚀 Senior Backend Developer — Benobe
 
 **2024 — Present**
 
-Working primarily with **PHP, Laravel, MySQL and REST APIs** to design and develop production-grade web applications.
+Working on production-grade web applications using:
 
-Responsibilities include:
+`PHP` · `Laravel` · `MySQL` · `REST API` · `Linux` · `Git`
 
-* Designing and developing Laravel applications
-* Building and maintaining REST APIs
-* Designing and optimizing MySQL databases
-* Implementing authentication using OAuth and JWT
-* Optimizing application and database performance
-* Working with Linux production servers
-* Deploying and maintaining applications
-* Debugging and resolving production issues
-* Integrating external services
-* Working with Git and collaborative development workflows
+#### Responsibilities
+
+* Backend architecture and development
+* REST API design and implementation
+* Database architecture and optimization
+* Authentication & authorization
+* Payment integration
+* Appointment scheduling systems
+* Performance optimization
+* Production deployment
+* Server management
+* Debugging and troubleshooting
+* External service integration
 
 ---
 
-### Full Stack Developer — Independent & Academic Projects
+### 💻 Full Stack Developer — Independent & Academic Projects
 
 **2020 — 2024**
 
@@ -138,95 +166,156 @@ Developed multiple web applications including:
 * 🎓 University projects
 * 🌐 Custom web applications
 
-Worked across both frontend and backend development, database design, API development, debugging, and application deployment.
+Worked across the complete development lifecycle from **database design and backend development to frontend implementation and deployment**.
 
 ---
 
-## 🎓 Education
+# 📊 GitHub Analytics
 
-### University of Kurdistan
+<div align="center">
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=miladkermaji8639&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&theme=tokyonight" />
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=miladkermaji8639&layout=compact&hide_border=true&langs_count=8&theme=tokyonight" />
+
+</div>
+
+---
+
+# 🔥 Contribution Streak
+
+<div align="center">
+
+<img src="https://streak-stats.demolab.com?user=miladkermaji8639&theme=tokyonight&hide_border=true" />
+
+</div>
+
+---
+
+# 🐍 Contribution Snake
+
+<div align="center">
+
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/output/github-snake-dark.svg"
+  />
+
+<source
+ media="(prefers-color-scheme: light)"
+ srcset="https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/output/github-snake.svg"
+/>
+
+<img
+ alt="GitHub Contribution Snake"
+ src="https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/output/github-snake.svg"
+/> </picture>
+
+</div>
+
+---
+
+# 📈 Contribution Activity
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=miladkermaji8639&theme=tokyo-night&hide_border=true&area=true" />
+
+</div>
+
+---
+
+# 🧠 What I Focus On
+
+<div align="center">
+
+|    ⚡ Performance   |   🔐 Security  |  🧩 Architecture |
+| :----------------: | :------------: | :--------------: |
+| Query Optimization | Authentication |    Clean Code    |
+|  Database Indexing |   OAuth / JWT  | Scalable Systems |
+|       Caching      |  API Security  |  Maintainability |
+
+</div>
+
+---
+
+# 🎓 Education
+
+### 🎓 University of Kurdistan
 
 **Bachelor's Degree — Computer Science**
 
-2016 — 2021
+`2016 — 2021`
 
-Focused on software development, web technologies, databases, and practical application development.
-
----
-
-## 📜 Certifications
-
-* 🎓 Comprehensive Laravel Development — TOPLEARN
-* 🎓 Advanced PHP Development — TOPLEARN
-* 🎓 Project-Based Livewire Development — TOPLEARN
-* 🎓 Project-Based Tailwind CSS — TOPLEARN
-* 🎓 Comprehensive Microsoft Excel — TOPLEARN
+Focused on software development, web technologies, databases and practical application development.
 
 ---
 
-## 📊 GitHub Stats
+# 📜 Certifications
 
-<p align="center">   <img src="https://github-readme-stats.vercel.app/api?username=miladkermaji8639&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="180"/>   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=miladkermaji8639&layout=compact&theme=tokyonight&hide_border=true" height="180"/> </p>
-
----
-
-## 🔥 GitHub Streak
-
-<p align="center">   <img src="https://streak-stats.demolab.com?user=miladkermaji8639&theme=tokyonight&hide_border=true" /> </p>
+* 🏆 Comprehensive Laravel Development — TOPLEARN
+* 🏆 Advanced PHP Development — TOPLEARN
+* 🏆 Project-Based Livewire Development — TOPLEARN
+* 🏆 Project-Based Tailwind CSS — TOPLEARN
+* 🏆 Comprehensive Microsoft Excel — TOPLEARN
 
 ---
 
-## 🐍 Contribution Snake
-
-<p align="center">   <picture>     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/output/github-snake-dark.svg">     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/output/github-snake.svg">     <img alt="GitHub Contribution Snake" src="https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/output/github-snake.svg">   </picture> </p>
-
----
-
-## 📈 Contribution Activity
-
-<p align="center">   <img src="https://github-readme-activity-graph.vercel.app/graph?username=miladkermaji8639&theme=tokyo-night&hide_border=true" /> </p>
-
----
-
-## 🌐 Connect With Me
-
-<p align="left">
-
-<a href="https://www.linkedin.com/in/milad-kermaji-0b0645428/">   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /> </a>
-
-<a href="https://github.com/miladkermaji8639">   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /> </a>
-
-<a href="https://benobe.ir/">   <img src="https://img.shields.io/badge/Website-Benobe.ir-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white" /> </a>
-
-<a href="https://t.me/Milad86399">   <img src="https://img.shields.io/badge/Telegram-229ED9?style=for-the-badge&logo=telegram&logoColor=white" /> </a>
-
-</p>
-
----
-
-## 💡 Currently
+# 🌱 Currently Learning
 
 ```text
-🔭 Working on: Scalable Web Applications & Healthcare Platforms
-🌱 Learning: Advanced Laravel, System Design & Performance Optimization
-💻 Main Stack: PHP + Laravel + MySQL
-⚡ Interested in: Backend Architecture, APIs & High-Performance Systems
-🎯 Goal: Building reliable, scalable and maintainable software
+Laravel Architecture
+System Design
+High Performance Backend
+API Architecture
+Database Optimization
+Cloud & DevOps
+Modern Frontend Development
 ```
 
 ---
 
-## ⚡ Developer Philosophy
+# 💡 Developer Mindset
 
-> "Good software isn't just code that works.
-> It's code that remains reliable, maintainable and scalable as the system grows."
+<div align="center">
+
+> ### "Code should not only work.
+>
+> ### It should be clean, reliable, scalable and maintainable."
+
+</div>
 
 ---
 
-<p align="center">
-  <b>Thanks for visiting my profile! 🚀</b>
-</p>
+# 🤝 Let's Connect
 
-<p align="center">
-  <i>Let's build something great together.</i>
-</p>
+<div align="center">
+
+<a href="https://github.com/miladkermaji8639">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
+</a>
+
+<a href="https://www.linkedin.com/in/milad-kermaji-0b0645428/">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+
+<a href="https://benobe.ir/">
+  <img src="https://img.shields.io/badge/Website-Benobe-0A66C2?style=for-the-badge&logo=google-chrome&logoColor=white" />
+</a>
+
+<a href="https://t.me/Milad86399">
+  <img src="https://img.shields.io/badge/Telegram-229ED9?style=for-the-badge&logo=telegram&logoColor=white" />
+</a>
+
+</div>
+
+---
+
+<div align="center">
+
+### ⚡ PHP • Laravel • MySQL • REST API • Linux
+
+**Building reliable software, one commit at a time. 🚀**
+
+</div>
