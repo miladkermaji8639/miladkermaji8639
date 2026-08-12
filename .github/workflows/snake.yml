@@ -6,10 +6,6 @@ on:
 
   workflow_dispatch:
 
-  push:
-    branches:
-      - main
-
 permissions:
   contents: write
 
@@ -19,7 +15,7 @@ jobs:
 
     steps:
       - name: Generate Snake
-        uses: Platane/snk/svg-only@v3
+        uses: Platane/snk@v3
         with:
           github_user_name: miladkermaji8639
           github_token: ${{ secrets.GH_TOKEN }}
@@ -28,31 +24,9 @@ jobs:
             dist/github-snake-dark.svg?palette=github-dark
 
       - name: Publish Snake
-        run: |
-          set -e
-
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          rm -rf output-branch
-
-          git clone \
-            --depth 1 \
-            --branch output \
-            "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
-            output-branch
-
-          rm -rf output-branch/*
-
-          cp -R dist/. output-branch/
-
-          cd output-branch
-
-          git add -A
-
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "chore: update contribution snake"
-            git push origin output
-          fi
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          build_dir: dist
+          target_branch: output
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
