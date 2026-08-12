@@ -15,26 +15,24 @@ permissions:
 
 jobs:
   generate:
-    name: Generate GitHub Contribution Snake
     runs-on: ubuntu-latest
 
     steps:
       - name: Generate Snake
-        uses: Platane/snk/svg-only@v3
+        uses: Platane/snk@v3
         with:
           github_user_name: miladkermaji8639
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           outputs: |
             dist/github-snake.svg?palette=github
             dist/github-snake-dark.svg?palette=github-dark
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish Snake
         run: |
           set -e
 
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           rm -rf output-branch
 
@@ -44,16 +42,16 @@ jobs:
             "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" \
             output-branch
 
+          rm -rf output-branch/*
+
+          cp -R dist/. output-branch/
+
           cd output-branch
-
-          find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
-
-          cp -R ../dist/. .
 
           git add -A
 
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "No changes to commit"
           else
             git commit -m "chore: update contribution snake"
             git push origin output
