@@ -2,13 +2,9 @@ name: 🐍 Generate Snake Animation - Dark Theme
 
 on:
   schedule:
-    # هر روز ساعت 00:00 UTC
     - cron: "0 0 * * *"
-    # هر 6 ساعت یک بار
     - cron: "0 */6 * * *"
-  
   workflow_dispatch:
-  
   push:
     branches:
       - main
@@ -21,31 +17,31 @@ jobs:
   generate-snake:
     runs-on: ubuntu-latest
     name: 🐍 Generate Dark Snake Animation
-    
+
     steps:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
+
       - name: 🌟 Create Output Directory
         run: |
           mkdir -p dist
           echo "✅ Output directory created"
-      
-      - name: 🐍 Generate Dark Theme Snake
+
+      - name: 🐍 Generate Dark Snake (Full Year)
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           outputs: |
-            dist/github-snake-dark.svg?palette=github-dark
-      
+            dist/github-snake-dark.svg?palette=github-dark&width=1000&height=220&color=0d1117
+
       - name: 🔧 Setup Git Configuration
         run: |
           git config --local user.email "github-action@github.com"
           git config --local user.name "🐍 Snake Bot"
-      
+
       - name: 📝 Auto Commit & Push
         continue-on-error: true
         run: |
@@ -58,7 +54,7 @@ jobs:
           else
             echo "ℹ️ No new contributions"
           fi
-      
+
       - name: ✨ Workflow Complete
         run: |
           echo "╔════════════════════════════════════════╗"
@@ -67,7 +63,7 @@ jobs:
           echo ""
           echo "📊 Theme: GitHub Dark (🌙)"
           echo "📁 Location: dist/github-snake-dark.svg"
-          echo "📈 Shows: All contributions in 2026"
+          echo "📈 Full year contribution view"
           echo "⏰ Updated: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
           echo ""
           echo "✨ Ready to display in your README!"
