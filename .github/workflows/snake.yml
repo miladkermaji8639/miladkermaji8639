@@ -1,4 +1,4 @@
-name: 🐍 Generate Professional Snake Animation
+name: 🐍 Generate Snake Animation - Dark Theme
 
 on:
   schedule:
@@ -15,97 +15,59 @@ on:
 
 permissions:
   contents: write
-  pages: write
   actions: write
 
 jobs:
   generate-snake:
     runs-on: ubuntu-latest
-    name: 🎮 Generate Professional Snake Animation
+    name: 🐍 Generate Dark Snake Animation
     
     steps:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: 🌟 Create Output Directories
+      - name: 🌟 Create Output Directory
         run: |
           mkdir -p dist
-          mkdir -p output
-          echo "✅ Output directories created"
+          echo "✅ Output directory created"
       
-      - name: 🎨 Generate Snake - GitHub Light Theme
-        uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          outputs: |
-            dist/github-snake.svg?palette=github-light
-            output/github-snake.svg?palette=github-light
-      
-      - name: 🌙 Generate Snake - GitHub Dark Theme
+      - name: 🐍 Generate Dark Theme Snake
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           outputs: |
             dist/github-snake-dark.svg?palette=github-dark
-            output/github-snake-dark.svg?palette=github-dark
-      
-      - name: 🧛 Generate Snake - Dracula Theme
-        uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          outputs: |
-            dist/github-snake-dracula.svg?palette=dracula
-            output/github-snake-dracula.svg?palette=dracula
-      
-      - name: ❄️ Generate Snake - Nord Theme
-        uses: Platane/snk@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          outputs: |
-            dist/github-snake-nord.svg?palette=nord
-            output/github-snake-nord.svg?palette=nord
       
       - name: 🔧 Setup Git Configuration
         run: |
           git config --local user.email "github-action@github.com"
-          git config --local user.name "🐍 Snake Animation Bot"
+          git config --local user.name "🐍 Snake Bot"
       
-      - name: 📝 Commit Snake Animations
+      - name: 📝 Auto Commit & Push
         continue-on-error: true
         run: |
-          if [ -n "$(git status --porcelain dist/)" ] || [ -n "$(git status --porcelain output/)" ]; then
-            echo "🎬 Found changes, committing..."
-            git add dist/ output/
-            git commit -m "🐍 Update snake animations - $(date '+%Y-%m-%d %H:%M:%S UTC')" || true
+          if [ -n "$(git status --porcelain dist/)" ]; then
+            echo "🎬 Found changes in contribution snake..."
+            git add dist/github-snake-dark.svg
+            git commit -m "🐍 Update snake - $(date '+%Y-%m-%d %H:%M')" || true
             git push origin main
-            echo "✅ Successfully pushed snake animations!"
+            echo "✅ Snake animation updated!"
           else
-            echo "ℹ️ No changes detected"
+            echo "ℹ️ No new contributions"
           fi
       
-      - name: 📊 Generate Summary
+      - name: ✨ Workflow Complete
         run: |
           echo "╔════════════════════════════════════════╗"
-          echo "║  🐍 Snake Animation Workflow Report   ║"
+          echo "║  🐍 Snake Animation Updated           ║"
           echo "╚════════════════════════════════════════╝"
           echo ""
-          echo "✅ Generated Themes:"
-          echo "   • 🌞 GitHub Light"
-          echo "   • 🌙 GitHub Dark"
-          echo "   • 🧛 Dracula"
-          echo "   • ❄️ Nord"
+          echo "📊 Theme: GitHub Dark (🌙)"
+          echo "📁 Location: dist/github-snake-dark.svg"
+          echo "📈 Shows: All contributions in 2026"
+          echo "⏰ Updated: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
           echo ""
-          echo "📁 Files Location:"
-          echo "   • dist/ (for main branch)"
-          echo "   • output/ (for output branch)"
-          echo ""
-          echo "⏰ Last Update: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
-          echo ""
-          echo "✨ Workflow completed successfully!"
+          echo "✨ Ready to display in your README!"
