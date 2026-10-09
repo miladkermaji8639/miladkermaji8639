@@ -2,31 +2,69 @@ name: Generate Snake Animation
 
 on:
   schedule:
+    # هر روز ساعت 12 شب (UTC) اجرا شود
     - cron: "0 0 * * *"
-
+  
+  # امکان اجرای دستی
   workflow_dispatch:
+  
+  # هنگام push به branch اصلی
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
+  pages: write
 
 jobs:
-  generate:
+  generate-snake:
     runs-on: ubuntu-latest
-
+    name: Generate Snake Animation
+    
     steps:
-      - name: Generate Snake
-        uses: Platane/snk@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v4
         with:
-          github_user_name: miladkermaji8639
-          github_token: ${{ secrets.GH_TOKEN }}
+          fetch-depth: 0
+      
+      - name: Generate Snake SVG
+        uses: Platane/snk@v3
+        id: snake-svg
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           outputs: |
-            dist/github-snake.svg?palette=github
+            dist/github-snake.svg?palette=github-light
             dist/github-snake-dark.svg?palette=github-dark
-
-      - name: Publish Snake
+            dist/github-snake.svg
+        continue-on-error: true
+      
+      - name: Create Output Directory
+        run: mkdir -p dist
+      
+      - name: Setup Git Configuration
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+      
+      - name: Add and Commit Snake Files
+        run: |
+          git add dist/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🐍 Generate snake animation" && git push)
+        continue-on-error: true
+      
+      - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
         with:
           build_dir: dist
-          target_branch: output
+          target_branch: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+      
+      - name: Workflow Status
+        if: always()
+        run: |
+          echo "✅ Snake animation workflow completed!"
+          echo "📊 Check dist/ folder for generated SVGs"
