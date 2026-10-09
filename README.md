@@ -9,7 +9,7 @@
 ### ⚡ PHP · Laravel · REST API · MySQL
 
 <p>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=650&lines=Building+Scalable+Web+Applications;Laravel+%26+PHP+Backend+Developer;REST+API+%7C+MySQL+%7C+Linux;Clean+Code+%7C+Performance+%7C+Security" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=650&lines=Building+Scalable+Web+Applications;Laravel+Specialist;Backend+Developer" />
 </p>
 
 <p>
@@ -192,25 +192,27 @@ Worked across the complete development lifecycle from **database design and back
 
 ---
 
-# 🐍 Contribution Snake
+# 🐍 Contribution Snake Animation
 
 <div align="center">
 
-<picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/output/github-snake-dark.svg"
-  />
+## 🌞 Light Theme
 
-<source
- media="(prefers-color-scheme: light)"
- srcset="https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/output/github-snake.svg"
-/>
+![GitHub Snake - Light](https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/main/dist/github-snake.svg?palette=github-light)
 
-<img
- alt="GitHub Contribution Snake"
- src="https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/output/github-snake.svg"
-/> </picture>
+## 🌙 Dark Theme
+
+![GitHub Snake - Dark](https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/main/dist/github-snake-dark.svg?palette=github-dark)
+
+## 🧛 Dracula Theme
+
+![GitHub Snake - Dracula](https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/main/dist/github-snake-dracula.svg?palette=dracula)
+
+## ❄️ Nord Theme
+
+![GitHub Snake - Nord](https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/main/dist/github-snake-nord.svg?palette=nord)
+
+> 📌 **Auto-updated**: These animations are refreshed every 6 hours with your latest contributions!
 
 </div>
 
@@ -309,29 +311,7 @@ Modern Frontend Development
 </a>
 
 </div>
-# 🐍 Contribution Snake
 
-<div align="center">
-
-<picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/output/github-snake-dark.svg"
-  />
-
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/output/github-snake.svg"
-  />
-
-  <img
-    alt="GitHub Contribution Snake"
-    src="https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/output/github-snake.svg"
-  />
-
-</picture>
-
-</div>
 ---
 
 <div align="center">
