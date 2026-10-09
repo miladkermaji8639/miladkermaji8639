@@ -1,60 +1,134 @@
-name: Generate Snake Animation
+name: 🐍 Generate Snake Animation
 
 on:
   schedule:
-    # هر روز ساعت 12 شب (UTC) اجرا شود
+    # هر روز ساعت 00:00 UTC
     - cron: "0 0 * * *"
+    # هر 6 ساعت یک بار
+    - cron: "0 */6 * * *"
   
-  # امکان اجرای دستی
   workflow_dispatch:
   
-  # هنگام push به branch اصلی
   push:
     branches:
       - main
+    paths:
+      - '.github/workflows/snake.yml'
 
 permissions:
   contents: write
   pages: write
+  actions: write
 
 jobs:
   generate-snake:
     runs-on: ubuntu-latest
-    name: Generate Snake Animation
+    name: 🎮 Generate Professional Snake Animation
     
     steps:
-      - name: Checkout Repository
+      - name: 📥 Checkout Repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: Generate Snake SVG
+      - name: 🎨 Generate Snake - GitHub Light Theme
         uses: Platane/snk@v3
-        id: snake-svg
+        id: snake-light
         with:
           github_user_name: ${{ github.repository_owner }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           outputs: |
-            dist/github-snake.svg?palette=github-light
-            dist/github-snake-dark.svg?palette=github-dark
-            dist/github-snake.svg
-        continue-on-error: true
+            dist/github-snake.svg?palette=github-light&width=900&height=100
       
-      - name: Create Output Directory
-        run: mkdir -p dist
+      - name: 🌙 Generate Snake - GitHub Dark Theme
+        uses: Platane/snk@v3
+        id: snake-dark
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          outputs: |
+            dist/github-snake-dark.svg?palette=github-dark&width=900&height=100
       
-      - name: Setup Git Configuration
+      - name: 🎯 Generate Snake - Dracula Theme
+        uses: Platane/snk@v3
+        id: snake-dracula
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          outputs: |
+            dist/github-snake-dracula.svg?palette=dracula&width=900&height=100
+      
+      - name: ✨ Generate Snake - Nord Theme
+        uses: Platane/snk@v3
+        id: snake-nord
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          outputs: |
+            dist/github-snake-nord.svg?palette=nord&width=900&height=100
+      
+      - name: 🌟 Create Output Directory
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          mkdir -p dist
+          echo "✅ Output directory ready"
       
-      - name: Add and Commit Snake Files
+      - name: 🔧 Setup Git Configuration
         run: |
-          git add dist/
-          git diff --quiet && git diff --staged --quiet || (git commit -m "🐍 Generate snake animation" && git push)
-        continue-on-error: true
+          git config --local user.email "github-action@github.com"
+          git config --local user.name "🐍 Snake Animation Bot"
+          git config --local user.password "${{ secrets.GITHUB_TOKEN }}"
       
-      - name: Deploy to GitHub Pages
+      - name: 📝 Commit Snake Animations
+        continue-on-error: true
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "🎬 Found changes, committing..."
+            git add dist/
+            git commit -m "🐍 Update snake animations - $(date '+%Y-%m-%d %H:%M:%S UTC')"
+            git push origin main
+            echo "✅ Successfully pushed snake animations!"
+          else
+            echo "ℹ️ No changes detected"
+          fi
+      
+      - name: 📊 Generate README Section
+        run: |
+          cat > /tmp/snake-section.md << 'EOF'
+          ## 🐍 Contribution Snake Animation
+          
+          <table>
+            <tr>
+              <td align="center">
+                <h3>🌞 Light Mode</h3>
+                <img src="dist/github-snake.svg?palette=github-light" width="100%" alt="Snake animation light">
+              </td>
+              <td align="center">
+                <h3>🌙 Dark Mode</h3>
+                <img src="dist/github-snake-dark.svg?palette=github-dark" width="100%" alt="Snake animation dark">
+              </td>
+            </tr>
+            <tr>
+              <td align="center">
+                <h3>🧛 Dracula Theme</h3>
+                <img src="dist/github-snake-dracula.svg?palette=dracula" width="100%" alt="Snake animation dracula">
+              </td>
+              <td align="center">
+                <h3>❄️ Nord Theme</h3>
+                <img src="dist/github-snake-nord.svg?palette=nord" width="100%" alt="Snake animation nord">
+              </td>
+            </tr>
+          </table>
+          
+          > 📌 **آپدیت خودکار:** این انیمیشن هر 6 ساعت یک بار به‌روز می‌شود
+          > 
+          > 🎮 **نمایش:** تعداد مشارکت‌های GitHub شما به صورت یک اسنک خوردن dots
+          EOF
+          
+          echo "📋 Snake section created for README"
+          cat /tmp/snake-section.md
+      
+      - name: 🌐 Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4
         with:
           build_dir: dist
@@ -63,8 +137,25 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: true
       
-      - name: Workflow Status
+      - name: 📈 Workflow Summary
         if: always()
         run: |
-          echo "✅ Snake animation workflow completed!"
-          echo "📊 Check dist/ folder for generated SVGs"
+          echo "╔════════════════════════════════════════╗"
+          echo "║  🐍 Snake Animation Workflow Report   ║"
+          echo "╚════════════════════════════════════════╝"
+          echo ""
+          echo "✅ Generated Themes:"
+          echo "   • 🌞 GitHub Light (github-snake.svg)"
+          echo "   • 🌙 GitHub Dark (github-snake-dark.svg)"
+          echo "   • 🧛 Dracula (github-snake-dracula.svg)"
+          echo "   • ❄️ Nord (github-snake-nord.svg)"
+          echo ""
+          echo "📊 Files Location: dist/"
+          echo "🔗 GitHub Pages: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}"
+          echo "⏰ Last Update: $(date -u +'%Y-%m-%d %H:%M:%S UTC')"
+          echo ""
+          echo "🎯 To use in your README:"
+          echo "   ![Snake Light](dist/github-snake.svg?palette=github-light)"
+          echo "   ![Snake Dark](dist/github-snake-dark.svg?palette=github-dark)"
+          echo ""
+          echo "✨ Workflow completed successfully!"
