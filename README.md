@@ -196,23 +196,11 @@ Worked across the complete development lifecycle from **database design and back
 
 <div align="center">
 
-## 🌞 Light Theme
+## 2026 Contribution Visualization
 
-![GitHub Snake - Light](https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/main/dist/github-snake.svg?palette=github-light)
+![GitHub Snake Animation Dark](https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/main/dist/github-snake-dark.svg?palette=github-dark)
 
-## 🌙 Dark Theme
-
-![GitHub Snake - Dark](https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/main/dist/github-snake-dark.svg?palette=github-dark)
-
-## 🧛 Dracula Theme
-
-![GitHub Snake - Dracula](https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/main/dist/github-snake-dracula.svg?palette=dracula)
-
-## ❄️ Nord Theme
-
-![GitHub Snake - Nord](https://raw.githubusercontent.com/miladkermaji8639/miladkermaji8639/main/dist/github-snake-nord.svg?palette=nord)
-
-> 📌 **Auto-updated**: These animations are refreshed every 6 hours with your latest contributions!
+> 🔄 **Auto-updated every 6 hours** | 📊 **Shows all contributions in 2026**
 
 </div>
 
